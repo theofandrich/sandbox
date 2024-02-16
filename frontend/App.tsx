@@ -1,5 +1,6 @@
 import React from "react"
-import logo from "./assets/dfinity.svg"
+// import logo from "./assets/dfinity.svg"
+import soon_gif from "./assets/coming_soon_gif.mp4"
 /*
  * Connect2ic provides essential utilities for IC app development
  */
@@ -28,7 +29,7 @@ function App() {
       <ConnectDialog />
 
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <video src={soon_gif} className="App-logo" autoPlay loop muted></video>
         <p className="slogan">
           Coming Soon
         </p>

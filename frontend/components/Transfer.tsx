@@ -17,7 +17,7 @@ const Transfer = () => {
     <div className="example">
       {wallet ? (
         <>
-          <p>Buy me beer</p>
+          <p>Buy me a beer</p>
           <button className="connect-button" onClick={onPurchase}>Purchase</button>
         </>
       ) : (
