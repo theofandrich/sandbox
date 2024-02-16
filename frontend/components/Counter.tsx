@@ -33,13 +33,31 @@ const Counter = () => {
 
   return (
     <div className="example">
-      {/* Use padStart to ensure the display format is "0000ms" */}
-      <p>Increment Time: {`${incrementTime}`.padStart(4, '0')}ms</p>
-      <p>Refresh Time: {`${refreshTime}`.padStart(4, '0')}ms</p>
-      <p style={{ fontSize: "2.5em" }}>{count?.toString()}</p>
-      <button className="connect-button" onClick={increment}>+</button>
+      <div className="time-container">
+        <div className="time-entry">
+          <span className="time-label">Update Time:</span>
+          <span className="time-value">{`${incrementTime}`.padStart(4, '0')} ms</span>
+        </div>
+        <div className="time-entry">
+          <span className="time-label">Query Time:</span>
+          <span className="time-value">{`${refreshTime}`.padStart(4, '0')} ms</span>
+        </div>
+        <div className="time-entry">
+          <span className="time-label">Total:</span>
+          <span className="time-value">{`${refreshTime + incrementTime}`.padStart(4, '0')} ms</span>
+        </div>
+      </div>
+      <div className="center-content">
+        <div className="centered-item">
+          <p className="count-number">{count?.toString()}</p>
+          <button className="connect-button" onClick={increment}>+</button>
+        </div>
+      </div>
     </div>
   );
+  
+  
+  
 };
 
 export { Counter };
